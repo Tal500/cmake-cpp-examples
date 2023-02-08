@@ -138,7 +138,6 @@ void printCommands() {
 
 bool step(Grid& grid) {
 	std::string fullCommand;
-	//std::cin.ignore();// TODO: Remove?
 	std::getline(std::cin, fullCommand);
 
 	std::stringstream s(fullCommand);
