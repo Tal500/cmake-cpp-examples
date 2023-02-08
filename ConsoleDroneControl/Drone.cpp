@@ -2,7 +2,7 @@
 
 #include "./Drone.h"
 
-Drone::Drone(int maxSpeed, Vector2D location): _maxSpeed(maxSpeed), _location(location) {
+Drone::Drone(int maxSpeed, Vector2D location) : _maxSpeed(maxSpeed), _location(location) {
 
 }
 
@@ -28,7 +28,7 @@ void Drone::tick() {
 
 		left -= stepX;
 	}
-	
+
 	// Continuing flying if needed
 	if (_location.y != destination.y) {
 		// Fly on the y axis

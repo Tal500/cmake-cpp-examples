@@ -12,7 +12,7 @@ public:
 	/**
 	 * We want the destructor to be virtual so the inheritaed classes can be automatically free when stored by pointer.
 	 * We furthermore want the destructor to be pure (i.e. =0) because class Drone is and should be pure,
-	     i.e. can only create new objects only by inherited classes. (it's already happen because of the pure virtual `speed()`,
+		 i.e. can only create new objects only by inherited classes. (it's already happen because of the pure virtual `speed()`,
 		 but still should be pure for a good practice).
 	 */
 	virtual ~Drone() = 0;// Pure virtual destructor

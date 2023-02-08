@@ -51,7 +51,7 @@ void Grid::print() const {
 			continue;
 		}
 		// otherwise
-		
+
 		const Vector2D destination = *destinationOptional;
 		if (location == destination) {
 			continue;
