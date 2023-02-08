@@ -1,0 +1,39 @@
+#ifndef __VECTOR_2D_H
+#define __VECTOR_2D_H
+
+/**
+ * A simple struct representing a 2D vector.
+ *
+ * We model the vector only by ints (i.e. not float/double) for simplicity to this project.
+ *
+ * Notice that we passing the the data by value and not by reference, it makes sense for this small byte sizes (64 bits on most platforms).
+ */
+struct Vector2D {
+public:
+	static constexpr int Infinity = 99999;
+
+	int x;
+	int y;
+
+	Vector2D(int x, int y);
+
+	bool operator==(Vector2D other) const;
+	bool operator!=(Vector2D other) const;
+
+	Vector2D operator+(Vector2D other) const;
+
+	Vector2D operator-(Vector2D other) const;
+
+	Vector2D operator*(int amount) const;
+
+	// Not in use
+	int lengthSquared() const;
+
+	int reachableLengthTo(Vector2D other) const;
+
+	Vector2D simpleNormalizedDirectionTo(Vector2D other) const;
+
+	static Vector2D randInRange(int end);
+};
+
+#endif
